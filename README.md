@@ -173,7 +173,17 @@ terraform destroy -auto-approve \
 terraform state list
 terraform state show module.root.module.ecs_task_role.aws_iam_role.ecs_task_role
 ```
+---
+## 🗑️ Cleaning Up Leftover Resources
 
+- All ECS **task definition revisions** should be manually de-registered.
+- For resources created using the code in `./requirements`, either run:
+  1. `terraform destroy`
+  2. Or manually delete:
+     - S3 bucket (note: currently protected from destruction)
+     - DynamoDB table
+     - IAM Role & OIDC Provider
+- You may also delete the **manually created** GitHub secrets and variables in the Terraform repository.
 ---
 
 This project was built for DevOps practice and interview readiness. Feel free to fork and adapt it to your own use case!
