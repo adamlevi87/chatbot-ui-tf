@@ -187,3 +187,6 @@ terraform state show module.root.module.ecs_task_role.aws_iam_role.ecs_task_role
 ---
 
 This project was built for DevOps practice and interview readiness. Feel free to fork and adapt it to your own use case!
+
+A rough illustration (just the basics):
+![image](https://github.com/user-attachments/assets/a2dfaa0e-43af-4d58-8e67-d04225ae9baf)
