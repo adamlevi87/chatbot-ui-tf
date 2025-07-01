@@ -87,7 +87,7 @@ module "vpc_network" {
   private_subnet_cidrs = [
   cidrsubnet(var.vpc_cidr_block, 8, 100),
   cidrsubnet(var.vpc_cidr_block, 8, 101)
-]
+  ]
 
   environment = var.environment
   project_tag   = var.project_tag
